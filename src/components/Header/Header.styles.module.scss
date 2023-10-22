@@ -1,0 +1,14 @@
+@import "variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerDarkMode {
+  color: $secondary-color;
+}
+
+.hidden {
+  visibility: hidden;
+}

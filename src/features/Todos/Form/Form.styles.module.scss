@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixins";
+
+.form {
+  color: black;
+  position: relative;
+  margin-top: 24px;
+
+  .inputRoot {
+    width: 100%;
+  }
+
+  .input {
+    padding: 12px;
+    font-size: 16px;
+    border: $primary-border;
+    outline: none;
+    width: 100%;
+
+    @include smallDesktop {
+      max-width: 1200px;
+      width: 100%;
+    }
+  }
+
+  .innerContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    @include smallDesktop {
+      width: 50%;
+    }
+  }
+
+  .button {
+    width: 100px;
+    border-left: 0;
+  }
+}
+
+.formDarkMode {
+  color: $secondary-color;
+
+  .input {
+    font-size: 16px;
+    border: $secondary-border;
+    background-color: $secondary-background;
+    color: $secondary-color;
+
+    &::placeholder {
+      color: rgba($color: $secondary-color, $alpha: 0.6);
+    }
+  }
+
+  .label {
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    width: fit-content;
+  }
+
+  .button {
+    border: $secondary-border;
+    color: $secondary-color;
+    background: $secondary-background;
+  }
+}
+
+.errors {
+  display: block;
+  position: absolute;
+  height: 22px;
+  bottom: 100%;
+  top: 74px;
+  color: red;
+}
+
+.errorsDarkMode {
+  background-color: $secondary-background;
+}

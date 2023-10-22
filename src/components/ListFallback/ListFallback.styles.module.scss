@@ -1,0 +1,13 @@
+@import "variables";
+
+.fallbackList {
+  border: 1px solid;
+  padding: 40px;
+  margin-top: 74px;
+  text-align: center;
+}
+
+.fallbackListDarkMode {
+  color: $secondary-color;
+  background: $secondary-background;
+}

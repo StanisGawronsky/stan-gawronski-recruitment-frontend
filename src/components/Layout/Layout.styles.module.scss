@@ -1,0 +1,10 @@
+@import "mixins";
+
+.layout {
+  margin: 0 auto;
+
+  @include smallDesktop {
+    max-width: 1000px;
+    width: 100%;
+  }
+}

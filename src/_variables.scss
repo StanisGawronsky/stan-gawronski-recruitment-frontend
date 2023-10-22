@@ -1,0 +1,13 @@
+$primary-color: black;
+$secondary-color: #0aff0a;
+$tertiary-color: #ebff0a;
+
+$primary-border: 1px solid $primary-color;
+$secondary-border: 1px solid $secondary-color;
+$tertiary-border: 1px solid $tertiary-color;
+
+$primary-background: transparent;
+$secondary-background: rgba(
+  $color: #000000,
+  $alpha: 0.8,
+);

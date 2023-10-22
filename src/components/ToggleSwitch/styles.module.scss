@@ -1,0 +1,54 @@
+@import "variables";
+
+.toggleSwitch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggleSwitchInput {
+  display: none;
+}
+
+.toggleSwitchContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggleSwitchSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.toggleSwitchSlider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchSlider {
+  background-color: $secondary-color;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchSlider::before {
+  background-color: $primary-color;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchSlider::before {
+  transform: translateX(26px);
+}

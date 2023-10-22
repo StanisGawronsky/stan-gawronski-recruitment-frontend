@@ -1,0 +1,33 @@
+@import "mixins";
+
+.checkboxRoot {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--black-a7);
+  outline: none;
+  @include smallDesktop {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.checkboxRoot:hover {
+  background-color: var(--violet-3);
+  cursor: pointer;
+}
+
+.checkboxIndicator {
+  color: var(--violet-11);
+}
+
+.label {
+  color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+}

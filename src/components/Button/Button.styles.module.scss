@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+
+.button {
+  padding: 12px;
+  background: $primary-background;
+  appearance: none;
+  border: $primary-border;
+  cursor: pointer;
+  color: $primary-color;
+  font-size: 16px;
+
+  @include smallDesktop {
+    &:hover {
+      transition: all 0.3s;
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}

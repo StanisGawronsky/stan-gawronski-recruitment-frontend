@@ -1,0 +1,86 @@
+@import "mixins";
+@import "variables";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 74px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border: 1px solid $primary-color;
+
+  p {
+    word-break: break-all;
+  }
+
+  button {
+    margin: 0 16px;
+    flex-shrink: 0;
+    color: $primary-color;
+    border: $primary-border;
+
+    @include smallDesktop {
+      &:hover {
+        transition: all 0.3s;
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.listItemDarkMode {
+  border-color: $secondary-color;
+  background-color: $secondary-background;
+
+  p {
+    color: $secondary-color;
+  }
+
+  button {
+    color: $secondary-color;
+    border: $secondary-border;
+    background: $secondary-background;
+
+    @include smallDesktop {
+      &:hover {
+        background-color: $secondary-color;
+        color: black;
+      }
+    }
+  }
+}
+
+.listItemDone {
+  p {
+    text-decoration: line-through;
+  }
+}
+
+.listItemDoneDarkMode {
+  border-color: $tertiary-color;
+  background-color: $secondary-background;
+
+  p {
+    color: $tertiary-color;
+  }
+
+  button {
+    color: $tertiary-color;
+    border: $tertiary-border;
+    background: $primary-background;
+
+    @include smallDesktop {
+      &:hover {
+        background-color: $tertiary-color;
+        color: black;
+      }
+    }
+  }
+}
